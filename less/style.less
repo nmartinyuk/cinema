@@ -1,0 +1,129 @@
+html, 
+body {
+    height: 100%;
+}
+
+.wrapper {
+    height: 100vh;
+    display: flex;
+
+    flex-direction: column;
+
+    .main {
+        height: 100%;
+    }
+}
+
+@place-color: rgb(0, 102, 255);
+@place-text-color: black;
+@place-text-size: 10px;
+.cinemaroom {
+    display: flex;
+    flex-direction: column;
+
+    .places {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        position: relative;
+        justify-content: flex-start;
+
+        .row {
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            user-select: none;
+            flex-wrap: nowrap;
+    
+            .number {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                color: @place-text-color;
+                user-select: none;
+                font-size: @place-text-size;
+            }
+
+            .number.left {
+                left: 0;
+            }
+            .number.right {
+                right: 0;
+            }
+    
+            .place {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-width: 2px;
+                border-style: solid;
+                border-radius: 3px;
+                margin: 2px;
+                cursor: pointer;
+                user-select: none;
+                color: @place-text-color;
+                font-size: @place-text-size;
+            }
+        }
+    }
+}
+
+.order {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .ticket {
+        
+        justify-content: flex-start;
+        align-items: flex-start;
+        overflow-y: auto;
+        flex: 1;
+        .ticket-item {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex: 1;
+            margin: 10px;
+        
+            .ticket-body {
+                flex: 1;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+        
+                .ticket-row, .ticket-place, .ticket-price {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: stretch;
+                    padding: 5px;
+        
+                    p {
+                        text-align: center;
+                    }
+        
+                    p.price {
+                        color: @place-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.card {
+    flex: 1;
+}
+
+button.close:focus,button.close:active {
+    outline: none !important;
+    box-shadow: none;
+}
+
+button.btn.submit {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div class="container wrapper">
+        <h3>Кинотеатр</h3>
+        <div class="row main">
+            <div class="col-md-4 order">
+                <div class="ticket"></div>
+                <button type="button" id="btnSubmit" class="btn btn-primary submit">До
+                    сплати: 0 грн.</button>
+            </div>
+            <div class="col-md-8 cinemaroom" id="cinemaroom">
+                <canvas class="screen"></canvas>
+                <div class="places"></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalThanks" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p>Спасибо за покупку!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalError" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p id="error"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
